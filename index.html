@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="theme-color" content="#2a1f45">
+<title>El Castillo de los Números</title>
+<style>
+html,body{margin:0;height:100%;background:#2a1f45;overflow:hidden;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-tap-highlight-color:transparent}
+#game{width:100vw;height:100vh;height:100dvh}
+#rotate{display:none;position:fixed;inset:0;z-index:10;background:#2a1f45;color:#fff;font:700 28px "Trebuchet MS",Arial,sans-serif;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+#rotate span{font-size:96px;display:block;animation:rot 1.8s ease-in-out infinite}
+@keyframes rot{0%,30%{transform:rotate(0)}70%,100%{transform:rotate(-90deg)}}
+@media (orientation:portrait) and (max-width:900px){#rotate{display:flex}}
+</style>
+</head><body><div id="game"></div>
+<div id="rotate"><span>📱</span>Gira el móvil para jugar</div>
+<script src="lib/phaser.min.js"></script>
+<script src="src/config.js"></script>
+<script src="src/math/DifficultyManager.js"></script>
+<script src="src/math/MathGenerator.js"></script>
+<script src="src/systems/ProgressManager.js"></script>
+<script src="src/systems/AudioManager.js"></script>
+<script src="src/systems/PlaceholderArt.js"></script>
+<script src="src/ui/AnswerButton.js"></script>
+<script src="src/ui/QuestionPanel.js"></script>
+<script src="src/ui/Backdrop.js"></script>
+<script src="src/systems/RoomBuilder.js"></script>
+<script src="src/entities/Player.js"></script>
+<script src="src/entities/Door.js"></script>
+<script src="src/entities/Obstacle.js"></script>
+<script src="src/scenes/BootScene.js"></script>
+<script src="src/scenes/MenuScene.js"></script>
+<script src="src/scenes/CharacterScene.js"></script>
+<script src="src/scenes/DifficultyScene.js"></script>
+<script src="src/scenes/MapScene.js"></script>
+<script src="src/scenes/GameScene.js"></script>
+<script src="src/scenes/ResultScene.js"></script>
+<script src="src/main.js"></script>
+</body></html>
